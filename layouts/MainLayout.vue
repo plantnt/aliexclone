@@ -33,12 +33,53 @@
                     @mouseenter="isAccountMenu = true"
                     @mouseleave="isAccountMenu = false"
                     class="relative flex items-center px-2.5 hover:text-[#7841fa] h-full cursor-pointer"
-                    :class="isAccountMenu ? 'bg-white border z-40 shadow-[0_15px_100px_40px_rgba(0,0,0,0.3)]':'border border-[#FAFAFA]'">
+                    :class="isAccountMenu ? 'bg-white border z-40 shadow':'border border-[#FAFAFA]'">
                     <Icon name="material-symbols:account-circle" size="17"/>
-                    Account
+                    Cuenta
                     <Icon name="material-symbols:keyboard-arrow-down-rounded" size="15" class="ml-5"/>
+
+                    <div id="AccountMenu" v-if="isAccountMenu"
+                    class="absolute bg-white w-[220px] text-[#333] z-40 top-[38px] -left-[100px] border-x border-b">
+                        <div v-if="true">
+                            <div class="text-semibold text-[15px] my-4 px-3">¡Bienvenido a Firebase!</div>
+                            <div class="flex items-center gap-1 px-3 mb-3">
+                                <NuxtLink
+                                to="/auth"
+                                class="bg-[#7841fa] text-center w-full text-[16px] rounded-sm text-white font-semibold p-2 hover:bg-[#482796] transition ease-all"
+                                >
+                                    Entrar / Registrarse
+                                </NuxtLink>
+                            </div>
+                        </div>
+                        <div class="border-b"/>
+                        <ul class="bg-white">
+                            <li
+                            @click="navigateTo('/orders')"
+                            class="text-[13px] py-2 px-4 w-full hover:bg-gray-200 transition ease-all"
+                            >
+                                Mis ordenes
+                            </li>
+                            <li
+                            v-if="true"
+                            class="text-[13px] py-2 px-4 w-full hover:bg-gray-200 transition ease-all"
+                            >
+                                Salir
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-        </ul>
+            </ul>
+        </div>
+        <div 
+        id="MainHeader"
+        class="flex items-center w-full bg-white"
+        >
+            <div class="flex lg:justify-start justify-between gap-10 max-w-[1150px] w-full px-3 py-5 mx-auto">
+                <NuxtLink to="/" class="min-w-[170px]">
+                    <img width="170" src="~/src/textLogo.png">
+                    
+                </NuxtLink>
+            </div>
         </div>
     </div>
 </template>
@@ -46,3 +87,4 @@
 <script setup lang="ts">
     let isAccountMenu = ref(false)
 </script>
+
