@@ -41,7 +41,7 @@
                     <div id="AccountMenu" v-if="isAccountMenu"
                     class="absolute bg-white w-[220px] text-[#333] z-40 top-[38px] -left-[100px] border-x border-b">
                         <div v-if="true">
-                            <div class="text-semibold text-[15px] my-4 px-3">¡Bienvenido a Firebase!</div>
+                            <div class="text-semibold text-[15px] my-4 px-3">¡Bienvenido a Furnimate!</div>
                             <div class="flex items-center gap-1 px-3 mb-3">
                                 <NuxtLink
                                 to="/auth"
@@ -76,9 +76,32 @@
         >
             <div class="flex lg:justify-start justify-between gap-10 max-w-[1150px] w-full px-3 py-5 mx-auto">
                 <NuxtLink to="/" class="min-w-[170px]">
-                    <img width="170" src="~/src/textLogo.png">
-                    
+                    <img width="170" src="../src/textLogo.png">
                 </NuxtLink>
+
+                <div class="max-w-[700px] w-full md:block hidden">
+                    <div class="relative">
+                        <div class="flex items-center border-none w-full px-3 py-1 bg-[#d9d9d9] rounded-lg">
+                            <input type="text"
+                            class="w-full placeholder-neutral-600 text-sm bg-transparent focus:outline-none rounded-lg"
+                            placeholder="Mueble de madera de pino"
+                            v-model="searchItem"/>
+                            <Icon name="line-md:loading-loop" size="25" v-if="isSearching" class="mr-2 ml-5"/>
+                            <button class="flex items-center h-[100%] p-1.5 px-2 ">
+                                <Icon name="streamline:magnifying-glass" size="20" color="#000"/>
+                            </button>   
+                        </div>
+                        <div class="absolute bg-white max-w-[700px] h-auto w-full">
+                            <div class="p-1">
+                                <NuxtLink to="`/item/1`" class="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100">
+                                    <div class="flex items-center">
+                                        <img src="" alt="">
+                                    </div>
+                                </NuxtLink>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -86,5 +109,6 @@
 
 <script setup lang="ts">
     let isAccountMenu = ref(false)
+    let isSearching = ref(false)
+    let searchItem = ref('')
 </script>
-
