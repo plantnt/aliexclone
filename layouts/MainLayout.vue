@@ -92,23 +92,60 @@
                             </button>   
                         </div>
                         <div class="absolute bg-white max-w-[700px] h-auto w-full">
-                            <div class="p-1">
-                                <NuxtLink to="`/item/1`" class="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100">
+                            <div v-if="false" class="p-1">
+                                <NuxtLink to="`/item/1`" class="flex items-center justify-between w-full cursor-pointer rounded-md hover:bg-gray-100">
                                     <div class="flex items-center">
-                                        <img src="" alt="">
+                                        <img class="rounded-md" width="40" src="../src/images/mueble.jpg">
+                                        <div class="truncate ml-2">TESTING</div>
                                     </div>
+                                    <div class="truncate mr-2">$2000</div>
                                 </NuxtLink>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <NuxtLink
+                to="/shoppingcart" class="flex items-center">
+                    <button
+                    class="relative md:block hidden"
+                    @mouseenter="isCartHover = true"
+                    @mouseleave="isCartHover= false">
+                        <span
+                        class="absolute flex items-center justify-center -right-[3px] top-0 bg-[#7841fa] h-[17px] min-w-[17px] text-xs text-white px-0.5 rounded-full">
+                            0
+                        </span>
+                        <div class="min-w-[40px]">
+                            <Icon name="ph:shopping-cart-simple-bold" size="33"/>
+                        </div>
+                    </button>
+                </NuxtLink>
+
+                <button
+                @click="userStore.isMenuOverlay=true"
+                class="md:hidden block rounded-lg transition ease-all p-1.5 -mt-[4px] hover:bg-gray-200">
+                    <Icon name="streamline:interface-setting-menu-1-button-parallel-horizontal-lines-menu-navigation-three-hamburger"
+                    size="33"/>
+
+                </button>
             </div>
         </div>
     </div>
+
+    <Loading v-if="userStore.isLoading"/>
+
+    <div class="lg:pt-[150px] md:pt-[130px] pt-[80px]"/>
+    <slot />
+
+    <Footer v-if="!userStore.isLoading"/>
 </template>
 
 <script setup lang="ts">
+import { useUserStore } from '~/stores/user.js'
+const userStore = useUserStore()
+
     let isAccountMenu = ref(false)
     let isSearching = ref(false)
+    let isCartHover = ref(false)
     let searchItem = ref('')
 </script>
