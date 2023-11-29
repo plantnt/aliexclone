@@ -26,7 +26,20 @@
                         <span class="h-4 min-w-4 rounded-full p-0.5 bg-[#EF8686] mr-2"> 
                             <Icon name="ic:baseline-star" class="-mt-[17px]" color="#fff" size="12"/>
                         </span>
-                        <p class="text-[#7841fa]">Descuento del 5%</p>
+                        <p class="text-[#7841fa] ">Descuento del 5%</p>
+                    </div>
+                    <div class="flex items-center justify-start my-2">
+                        <Icon name="ic:baseline-star" color="#EF8686"/>
+                        <Icon name="ic:baseline-star" color="#EF8686"/>
+                        <Icon name="ic:baseline-star" color="#EF8686"/>
+                        <Icon name="ic:baseline-star" color="#EF8686"/>
+                        <Icon name="ic:baseline-star" color="#EF8686"/>
+                        <span class="text-[13px] font-light ml-2">Reseñas y Ordenes</span>
+                    </div>
+                    <div class="border-b"/>
+                    <div class="flex items-center justify-start gap-2 my-2">
+                        <div class="text-xl font-bold">$ {{ priceComputed }} </div>
+                        <span class="bg-[#7841fa] bg-opacity-50 text-black text-[9px] font-semibold px-1 rounded-sm">70% off</span>
                     </div>
                 </div>
             </div>
@@ -44,6 +57,10 @@ onMounted(() => {
         currentImage.value = 'https://m.media-amazon.com/images/I/81IRC5sTOjL._AC_UF894,1000_QL80_.jpg'
         images.value[0] = 'https://m.media-amazon.com/images/I/81IRC5sTOjL._AC_UF894,1000_QL80_.jpg'
     })
+})
+
+const priceComputed = computed(() => {
+    return '26.40'
 })
 
 const images = ref([
