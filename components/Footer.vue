@@ -17,13 +17,8 @@
     </div>
 <div id="FooterSub" class="w-full bg-[#333] text-sm text-gray-400 flex ">
     <div class="max-w-[1200px] mx-auto p-4">
-        &copy; Copyrigth 2023 Zeroware - Furnimate
+        &copy; Zeroware - Furnimate 2023
     </div>
 </div>
 </template>
 
-<script>
-    export default {
-        
-    }
-</script>
