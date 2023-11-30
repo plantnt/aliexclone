@@ -44,7 +44,7 @@
 
                     <div class="py-2"/>
 
-                    <button class="px-6 py-2 rounded-lg text-white text-lg font-semibold bg-gradient-to-tl from-[#7841fa] via-[#9741fa] to-[#aa41fa] bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-500 "
+                    <button class="px-6 py-2 rounded-lg text-white text-lg font-semibold bg-gradient-to-tl from-[#fc66ff] via-[#954fff] to-[#cb53ff] bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-500 "
                             @click="addToCart()" 
                             :disabled="isInCart"
                             >
