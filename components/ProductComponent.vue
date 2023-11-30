@@ -6,7 +6,7 @@
         <img class="rounded-t" :src="product.url">
         <div id="ProductDetails">
             <div class="flex item-center gap-1 px-1 relative top-1">
-                <span class="bg-[#7841fa] bg-opacity-50 text-white text-[9px] font-semibold px-1.5 rounded-sm">
+                <span class="bg-[#7841fa] bg-opacity-0 text-white text-[9px] font-semibold px-1.5 rounded-sm">
                     Oferta inicial
                 </span>
                 <span class="bg-white border text-[#7841fa] text-[9px] font-semibold px-1.5 rounded-sm">
@@ -17,7 +17,7 @@
                 <span class="text-black text-xl font-semibold">${{ priceComputed }}</span>
                 <span class="text-gray-500 text-sm text-light line-through">${{ oldPriceComputed }}</span>
             </span>
-                <span class="px-1 relative -top-1.5 text-[#7841fa] text-xs font-semibold">
+                <span class="px-1 relative -top-1.5 text-[#d13434] text-xs font-semibold">
                     Descuento de 5%
                 </span>
                 
