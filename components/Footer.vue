@@ -7,10 +7,10 @@
                     <div class="text-[#222] text-sm">Reportar problemas</div>
                 </div>
                 <div class="md:w-[50%] pt-4">
-                    <NuxtLink to="https://www.instagram.com/furnimate_zw/?hl=en">
+                    <a href="https://www.instagram.com/furnimate_zw/?hl=en" target="_blank">
                         <Icon name="mdi:instagram" size="25" class="hover:cursor-pointer"/>
                         @furnimate_zw
-                    </NuxtLink>
+                    </a>
                 </div>
             </div>
         </div>
