@@ -4,7 +4,15 @@
             <div class="md:flex gap-4 justify-between mx-auto w-full">
                 <div class="md:w-[65%]">
                     <div class="bg-white rounded-lg p-4">
-                        
+                        <div class="text-xl font-semibold mb-2">
+                            Dirección de entrega
+                        </div>
+                        <div v-if="true">
+                            <NuxtLink to="/address" class="flex items-center pb-2 text-blue-500 hover: transition-all">
+                                <Icon name="material-symbols:add-circle-outline" size="18" class="mr-2"/>
+                                Añadir dirección
+                            </NuxtLink>
+                        </div>
                     </div>
                 </div>
             </div>
