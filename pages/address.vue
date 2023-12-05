@@ -31,10 +31,10 @@
                     />
 
                     <button :disabled="isWorking" type="submit" 
-                            class="mt-6 w-full text-[21px] text-white font-semibold p-1.5 rounded-full bg-gradient-to-tl from-[#fc66ff] via-[#954fff] to-[#cb53ff] bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-500"
+                            class="mt-6 w-full text-[21px] text-white font-bold p-1.5 rounded-full bg-gradient-to-tl from-[#fc66ff] via-[#954fff] to-[#cb53ff] bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-500"
                     >
-                        <div v-if="!isWorking">Actualizar dirección</div>
-                        
+                        <div v-if="!isWorking">Actualizar datos</div>
+                        <Icon v-else name="line-md:loading-loop" size="25" class="mr-2"/>
                         
                     </button>
                 </form>
