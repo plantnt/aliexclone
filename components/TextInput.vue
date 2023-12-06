@@ -1,17 +1,20 @@
 <template>
     <div>
         <client-only>
-            <input class="w-full bg-white text-black text-sm border-gray-300 border-2 rounded-lg p-3 placeholder-gray-600 focus:outline-none"
+            <input class="w-full bg-white text-black text-sm border-gray-300 border-[1.5px] rounded-lg p-3 placeholder-gray-600 focus:outline-none"
                    :maxlength="max"
                    :placeholder="placeholder"
                    @focus="isFocused = true"
                    @blur="isFocused = false"
-                   :class="{'border-gray-600 border-2 transition-all' : isFocused}, {'border-red-500' : error}"
+                   :class="{'border-gray-600 border-[1.5px] transition-all' : isFocused}, {'border-red-500 border-[1.5px]' : error}"
                    :type="inputType"
                    v-model="inputComputed"       
                    autocomplete="off"
             />
         </client-only>
+        <span v-if="error" class="text-red-500 text-[14px] font-light">
+            {{ error }}
+        </span>
     </div>
 </template>
 
