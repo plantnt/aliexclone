@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true
+    }
+  },
   pages: true,
   modules: [
     'nuxt-icon',
@@ -8,7 +14,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@nuxtjs/tailwindcss',
-    // '@nuxtjs/supabase'
+    '@nuxtjs/supabase'
   ],
   build: {
     transpile: ['pinia-plugin-persistedstate'],

@@ -96,7 +96,7 @@
                                 <NuxtLink to="`/item/1`" class="flex items-center justify-between w-full cursor-pointer rounded-md hover:bg-gray-100">
                                     <div class="flex items-center">
                                         <img class="rounded-md" width="40" src="../src/images/mueble.jpg">
-                                        <div class="truncate ml-2">TESTING</div>
+                                        <div class="truncate ml-2">PRUEBA</div>
                                     </div>
                                     <div class="truncate mr-2">$2000</div>
                                 </NuxtLink>
